@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* border-box add padding and border to the width itself */
+
+body{
+    background-color:white;
+}
+
+.main{
+    background: #ccc;
+    width: 400px;
+    height: 175px;
+    margin: 100px auto;
+    position: relative;
+    border-radius: 5px;
+}
+
+.badge{
+    width: 96px;
+    background: #e66357;
+    color: white;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: -15px;
+    left: 150px;
+}
+
+.clock{
+    background: black;
+    color:white;
+    width: 200px;
+    height: 90px;
+    padding-top: 25px;
+    text-align: center;
+    font-family: Orbitron, sans-serif;
+    font-size: 30px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 4px;
+}
+
+.analog-clock {
+    height: 160px;
+    width: 90%;
+    max-width: 160px;
+    margin: 0 auto;
+    border-radius: 50%;
+    /* border: 5px solid gray; */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-image: url(https://www.freepngimg.com/thumb/clock/33735-6-clock-no-hands-clipart.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .hr,
+  .min,
+  .sec {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    transform-origin: left;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+  }
+  
