@@ -14,6 +14,7 @@ body{
 
 .main{
     background: #ccc;
+    border: 5px solid black;
     width: 400px;
     height: 175px;
     margin: 100px auto;
@@ -34,8 +35,7 @@ body{
 }
 
 .clock{
-    background: black;
-    color:white;
+    color:black;
     width: 200px;
     height: 90px;
     padding-top: 25px;
@@ -56,7 +56,7 @@ body{
     border-radius: 50%;
     /* border: 5px solid gray; */
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 10px;
     background-image: url(https://www.freepngimg.com/thumb/clock/33735-6-clock-no-hands-clipart.png);
     background-position: center;
@@ -64,17 +64,105 @@ body{
     background-repeat: no-repeat;
   }
 
-  .hr,
-  .min,
+  .hr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25%;
+    height: 5px;
+    background-color:#5f738f;
+    transform-origin: left;
+    transform: rotate(-90deg);
+  }
+
+  .min{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 35%;
+    height: 5px;
+    background-color:#5f738f;;
+    transform-origin: left;
+    transform: rotate(-90deg);
+  }
+
   .sec {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 30%;
-    height: 5px;
-    background-color: rgb(0, 0, 0);
+    width: 40%;
+    height: 2px;
+    background-color:#5f738f;
     transform-origin: left;
-    border-radius: 50%;
     transform: rotate(-90deg);
   }
-  
+
+  .notification{
+    background-color: #f8d7da;
+    display: none;
+}
+
+.notification p{
+    color: #721c24;
+    font-size: 1.2em;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.weather-container{
+  width: 200px;
+  height: 90px;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
+
+.weather-icon img{
+  position:absolute;
+  height: 50px;
+  top: 5px;
+  left: 20px;
+}
+
+.temperature-value{
+  width : 100px;
+  height: 60px;
+  font-family: Orbitron, sans-serif;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+.temperature-value > p {
+  padding: 0;
+  margin: 0;
+  color:black;
+  font-size: 1em;
+  text-align: center;
+  cursor:pointer;
+}
+
+.temperature-description p{
+    padding: 8px;
+    margin: 0;
+    color:black;
+    text-align: center;
+    font-size: 0.5em;
+    font-family: Orbitron, sans-serif;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}
+
+.location p{
+  margin: 0;
+  padding: 0;
+  color:black;
+  text-align: center;
+  font-size: 0.8em;
+  font-family: Orbitron, sans-serif;
+  position:absolute;
+  top: 6px;
+  right: 20px;
+}
