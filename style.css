@@ -9,7 +9,7 @@
 /* border-box add padding and border to the width itself */
 
 body{
-    background-color:white;
+    background-color: white;
 }
 
 .main{
@@ -164,5 +164,5 @@ body{
   font-family: Orbitron, sans-serif;
   position:absolute;
   top: 6px;
-  right: 20px;
+  right: 90px;
 }
