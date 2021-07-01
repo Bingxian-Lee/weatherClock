@@ -69,10 +69,10 @@ function displayWeather(){
     iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     descElement.innerHTML = weather.description;
-    locationElement.innerHTML = `${weather.city}, ${weather.country}`;
+    locationElement.innerHTML = `${weather.country}`;
 }
 
-//digital clock functionality
+//DIGITAL CLOCK 
 function clock(){
 
     const fullDate = new Date();
@@ -96,7 +96,7 @@ function clock(){
 
 }
 
-//analog clock functionality
+//ANALOG CLOCK
 function analog(){
     const fullDate = new Date();
     var hours = fullDate.getHours();
@@ -112,6 +112,29 @@ function analog(){
     second.style.transform = `rotate(${secDeg}deg)`
 }
 
-// updates hours minute seconds every 1 miliseconds
+// CHANGES BACKGROUND COLOR ACCORDING TO TENNIS SEASON
+
+var currentTime = new Date();
+var month = currentTime.getMonth() + 1;
+var total = month;
+switch(total) { 
+    case(total >= 3 && total <= 5): //ROLAND GARROS
+    var season = 'Brown';
+    break
+    case(total >= 6 && total <= 8): //WIMBLEDON
+    var season = 'DarkGreen';
+    break;
+    case(total >= 9 && total <= 11): //US OPEN
+    var season = 'DarkBlue';
+    case(total == 12 || total == 1 || total == 2): //AUS OPEN
+    var season = 'DarkCyan';
+    default:
+        var season = 'DarkGreen'
+
+}
+document.body.style.background = season;
+console.log(total);
+
+// UPDATE HR MIN SEC EVERY 1 MS
 setInterval(clock,100);
 setInterval(analog,100);
